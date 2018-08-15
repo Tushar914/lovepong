@@ -1,2 +1,2 @@
 # lovepong
-A Simple pong game made with LOVE framework in Lua
+A Simple 2 player pong game made with LOVE framework in Lua
