@@ -18,7 +18,6 @@ function love.load()
     isPaused = true
     start = true
     gameOver = false
-    cpu = true
 end
 
 function love.draw()
