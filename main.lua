@@ -68,20 +68,11 @@ end
 function love.update(dt)
     if not isPaused and not gameOver then
         ---left paddle
-        if not cpu then
-            if love.keyboard.isDown("s") and (l_x+paddle_height) < win_height then
-                l_x = l_x + paddle_speed * dt
-            end
-            if love.keyboard.isDown("w") and l_x > 0 then
-                l_x = l_x - paddle_speed * dt
-            end
-        else
-            if direction_v == "down" and (l_x+paddle_height) < win_height then
-                l_x = l_x + paddle_speed * dt
-            end
-            if direction_v == "up" and l_x > 0 then
-                l_x = l_x - (paddle_speed - math.floor((math.random() * 150) + 1)) * dt
-            end
+        if love.keyboard.isDown("s") and (l_x+paddle_height) < win_height then
+            l_x = l_x + paddle_speed * dt
+        end
+        if love.keyboard.isDown("w") and l_x > 0 then
+            l_x = l_x - paddle_speed * dt
         end
 
         --right paddle
